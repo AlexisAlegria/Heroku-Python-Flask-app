@@ -19,8 +19,6 @@ class Friends(db.Model):
     def __repr__(self):
         return '<Name %r>' % self.id
 
-subscribers=[]
-
 
 @app.route('/friends', methods=['POST', 'GET'])
 def friends():
@@ -33,7 +31,7 @@ def friends():
         try:
             db.session.add(new_friend)
             db.session.commit()
-            return redirect('/friends')
+            return redirect('/friends.html')
         except:
             return "An error occurs adding your friend..."
 
