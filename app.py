@@ -31,7 +31,7 @@ def friends():
         try:
             db.session.add(new_friend)
             db.session.commit()
-            return redirect('/friends.html')
+            return redirect('/friends')
         except:
             return "An error occurs adding your friend..."
 
@@ -103,7 +103,6 @@ def form():
             last_name=last_name,
             email=email)
 
-    subscribers.append(f"{first_name} {last_name} {email}")
     title = "Thank you!"
 
-    return render_template("form.html", title = title, subscribers=subscribers)
+    return render_template("form.html", title = title)
