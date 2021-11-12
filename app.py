@@ -109,5 +109,3 @@ def form():
     title = "Thank you!"
 
     return render_template("form.html", title = title, subscribers=subscribers)
-
-
