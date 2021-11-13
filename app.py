@@ -65,16 +65,16 @@ def delete(id):
         return "An Error occurs deleting name..."
 
 
-@app.route('/index')
+@app.route('/')
 def index():
     title = "Alexis Alegria's Portfolio"
-    return render_template("index.html", title=title)
+    return render_template('index.html', title=title)
 
 @app.route('/about')
 def about():
     names = ["John", "Mery", "Wes", "Sally"]
 
-    return render_template("about.html", names = names)
+    return render_template('about.html', names = names)
 
 @app.route('/subscribe')
 def subscribe():
@@ -97,7 +97,7 @@ def form():
 
     if not first_name  or not last_name or not email:
         error_statement = "All Form fields required..."
-        return render_template("subscribe.html", 
+        return render_template('subscribe.html', 
             error_statement=error_statement,
             first_name=first_name,
             last_name=last_name,
@@ -105,4 +105,4 @@ def form():
 
     title = "Thank you!"
 
-    return render_template("form.html", title = title)
+    return render_template('form.html', title = title)
