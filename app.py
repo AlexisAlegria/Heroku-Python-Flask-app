@@ -65,7 +65,7 @@ def delete(id):
         return "An Error occurs deleting name..."
 
 
-@app.route('/')
+@app.route('/index')
 def index():
     title = "Alexis Alegria's Portfolio"
     return render_template("index.html", title=title)
